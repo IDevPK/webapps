@@ -19,7 +19,7 @@
 	}
 
 	.nav-list {
-		width: 70%;
+		width: 90%;
 		display: flex;
 		align-items: center;
 	}
@@ -32,9 +32,9 @@
 
 	.logo img {
 		width: 100px;
-		border-radius: 50px;
+		border-radius: 25px;
     /* margin: 10px; */
-		padding: 20px;
+		padding: 10px;
 	}
 
 	.nav-list li {
@@ -54,38 +54,39 @@
 	}
 
 	.rightnav {
-		width: 30%;
+		width: 10%;
 		text-align: right;
 	}
 
 	#search {
 		padding: 5px;
-		font-size: 17px;
+		/* font-size: 5px; */
 		border: 2px solid grey;
 		border-radius: 9px;
 	}
 
 	.firstsection {
-		background-color: rgb(72, 97, 72);
-		height: 400px;
+		background-color: rgb(187, 192, 187);
+		/* height: 400px; */
 	}
 
 	.secondsection {
 		background-color: rgb(151, 151, 199);
-		height: 400px;
+		/* height: 400px; */
 	}
 
 	.box-main {
+		padding: 25px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		max-width: 80%;
 		margin: auto;
-		height: 80%;
+		height: 60%;
 	}
 
 	.firsthalf {
-		width: 100%;
+		/* width: 100%; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -129,7 +130,8 @@
 	}
 
 	.section {
-		height: 400px;
+		/* height: 400px; */
+		padding: 25px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -162,5 +164,33 @@
 		font-family: 'Ubuntu', sans-serif;
 		display: flex;
 		justify-content: center;
-		color: white;
+		color: rgb(0, 0, 0);
+	}
+
+	table {
+		font-family: Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		padding: 15px;
+	}
+	
+	table, td, th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		padding: 15px;
+	}
+	
+	table, tr:nth-child(even){
+		background-color: #589269;
+		padding: 15px;
+	}
+	
+	table, tr:hover {background-color: #51754f;}
+	
+	table, th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: #327059;
+		color: rgb(104, 0, 17);
 	}

@@ -28,8 +28,8 @@ class StudentSeeder extends Seeder
                 'age'=> $student->age,
             ]);
 
-            //with every single entry of json file it will add 15 entries of fake data
-            for( $i = 0; $i < 15; $i++ ) {
+            //with every single entry of json file it will add 25 entries of fake data
+            for( $i = 0; $i < 25; $i++ ) {
                  //this will run alongwith json loop and add some fake data
  
                 student::create([
