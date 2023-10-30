@@ -1,0 +1,34 @@
+[
+  {
+    "name":"Ali",
+    "email":"ali@gmail.com",
+    "city" : "chichawatni",
+    "subject":"Math",
+    "percentage":50,
+    "age" : 20
+  },
+  {
+    "name":"safdar",
+    "email":"safdar@gmail.com",
+    "city" : "Burewala",
+    "subject":"Biology",
+    "percentage":60,
+    "age" : 30
+  },
+  {
+    "name":"Mohsin",
+    "email":"mohsin@gmail.com",
+    "city" : "Kasowal",
+    "subject":"Islamiat",
+    "percentage":60,
+    "age" : 19
+  },
+  {
+    "name":"Zargon",
+    "email":"zargon@gmail.com",
+    "city" : "lahore",
+    "subject":"Urdu",
+    "percentage":40,
+    "age" : 45
+  }
+]

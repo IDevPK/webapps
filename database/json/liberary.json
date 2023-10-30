@@ -1,0 +1,23 @@
+[
+  {
+    "stu_id":2,
+    "book":"Math",
+    "status":false
+  },
+  {
+    "stu_id":3,
+    "book":"Bio",
+    "status":false
+  },
+  {
+    "stu_id":1,
+    "book":"Urdu",
+    "status":false
+  },
+  {
+    "stu_id":4,
+    "book":"Statistics",
+    "status":false
+  }
+
+]
