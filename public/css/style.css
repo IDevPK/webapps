@@ -49,24 +49,25 @@
 	}
 
 	.nav-list li a:hover {
-		color: grey;
+		color: rgb(201, 201, 201);
 		background-color: aqua;
 	}
 
 	.rightnav {
-		width: 10%;
+		width: 20%;
 		text-align: right;
 	}
 
 	#search {
 		padding: 5px;
-		/* font-size: 5px; */
-		border: 2px solid grey;
+		font-size: 5px;
+		border: 2px solid rgb(255, 255, 255);
 		border-radius: 9px;
 	}
 
 	.firstsection {
 		background-color: rgb(187, 192, 187);
+		width: auto;
 		/* height: 400px; */
 	}
 
@@ -80,7 +81,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		max-width: 80%;
+		/* max-width: 90%; */
 		margin: auto;
 		height: 60%;
 	}
@@ -164,7 +165,7 @@
 		font-family: 'Ubuntu', sans-serif;
 		display: flex;
 		justify-content: center;
-		color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
 	}
 
 	table {
@@ -181,7 +182,7 @@
 	}
 	
 	table, tr:nth-child(even){
-		background-color: #589269;
+		background-color: #f1b0b0;
 		padding: 15px;
 	}
 	
@@ -192,5 +193,5 @@
 		padding-bottom: 12px;
 		text-align: left;
 		background-color: #327059;
-		color: rgb(104, 0, 17);
+		color: rgb(255, 255, 255);
 	}
