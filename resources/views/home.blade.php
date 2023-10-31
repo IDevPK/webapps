@@ -24,6 +24,8 @@
               <th>View</th>
               <th>Update</th>
               <th>Delete</th>
+              <th>Created</th>
+              <th>Updated</th>
             </tr>
             @foreach ($data as $user)
             <tr>
@@ -34,9 +36,11 @@
               <td>{{$user->subject}}</td>
               <td>{{$user->percentage}}</td>
               <td>{{$user->age}}</td>
+              <td>{{$user->created_at}}</td>
+              <td>{{$user->updated_at}}</td>
              
               <td><a href="{{route('user',$user->student_id)}}" class="btn btn-primary btn-sm">View</a></td>
-              <td><a href="{{route('updateuser',$user->student_id)}}" class="btn btn-warning btn-sm">Update</a></td>
+              <td><a href="{{route('update.userPage',$user->student_id)}}" class="btn btn-warning btn-sm">Update</a></td>
               <td><a href="{{route('deleteuser',$user->student_id)}}" class="btn btn-danger btn-sm" id="{{$user->student_id}}">Delete</a></td>
 
             </tr>

@@ -31,17 +31,28 @@ class UserController extends Controller
         return view('user',['data'=>$user]);
     }
 
-    public function userUpdate(Request $request){
+    public function updateUserPage(string $id){
+                $data = DB::table('students')->where("student_id",$id)->get();
+                $user = collect($data)->first();
+
+                return view("userupdate",["data"=>$user]);
 
     }
 
-    public function updateUser(string $id){
-            $updateuser = DB::table('students')
+    public function updateUser(Request $req,string $id){
+
+        $updateuser = DB::table('students')
         ->where('student_id',$id)
         ->update(
             [
-                'name'=>fake()->name(),
-                'email'=>fake()->email(),
+            'name' =>$req->name,
+            'email'=>$req->email,
+            'city' =>$req->city,
+            'subject' =>$req->subject,
+            'percentage'=>$req->percentage,
+            'age'=>$req->age,
+            'updated_at'=>now()
+
             ]
         );
         if($updateuser){
@@ -86,6 +97,8 @@ class UserController extends Controller
             'percentage'=>$req->percentage,
             // 'percentage'=>fake()->numberBetween(0,100),
             'age'=>$req->age,
+            'created_at'=>now(),
+            'updated_at'=>now()
             // 'age'=>fake()->numberBetween(10,60),
         ]);
         if($user){
@@ -95,6 +108,9 @@ class UserController extends Controller
         }
     }
 
+    public function newuser(){
+    return view("newuser");
+    }
 }
 
 

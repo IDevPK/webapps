@@ -50,7 +50,7 @@
 
 	.nav-list li a:hover {
 		color: rgb(201, 201, 201);
-		background-color: aqua;
+		background-color: rgb(37, 37, 37);
 	}
 
 	.rightnav {

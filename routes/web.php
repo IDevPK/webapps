@@ -11,16 +11,19 @@ Route::controller(UserController::class)->group(function () {
 
   Route::get("/","home")->name("home");
 Route::get("/user/{id}",'user')->name("user");
-Route::get("/updateuser/{id}",'updateUser')->name("updateuser");
+
+Route::post("/updateuser/{id}","updateUser",)->name('updateuser');
+Route::get("/updateuserpage/{id}",'updateUserPage')->name("update.userPage");
+
 Route::get("/deleteuser/{id}",'deleteUser')->name("deleteuser");
 Route::post("/add",'createUser')->name("createuser");
 Route::get("/deleteall",'deleteAll')->name("deleteall");
+Route::get("/newuser","newuser")->name("addUser");
 
 });
 
-Route::get("/newuser",function(){
-  return view("newuser");
-})->name("addUser");
+
+
 // Route::get("/",[UserController::class,'home'])->name("home");
 // Route::get("/user/{id}",[UserController::class,'user'])->name("user");
 // Route::get("/updateuser/{id}",[UserController::class,'updateUser'])->name("updateuser");
