@@ -4,7 +4,14 @@
       Users List and Library Status
     </h1>
     <br>
-    <p>We have users list here from DataBase</p>
+    <p>We have users list here from DataBase</p><br>
+    @if(Session::get('message') || Session::get('success'))
+    <p class="alert alert-danger">
+      {{Session::get('message')}}
+      {{Session::get('success')}}
+    </p>        
+    @endif
+      
     {{-- <a href="{{route('createuser')}}" class="btn btn-success btn-sm">Add New</a> --}}
     <a href="{{route('addUser')}}" class="btn btn-success btn-sm">Add New</a>
     <a href="{{route('deleteall')}}" class="btn btn-danger btn-sm">Delete All</a>
@@ -51,6 +58,8 @@
       </div>
     </div>
     
-   
+   <div>
+   {{$data->links()}}
+   </div>
 @endsection
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rules\Exists;
 
 class UserController extends Controller
 {
@@ -11,13 +12,16 @@ class UserController extends Controller
 
     public function home(){
 
-        $students = DB::table("students")
-        // ->orderBy('name')
-        // ->orderBy('age', 'desc')
-        // ->orderBy('age', 'asc')
-        //latest() without get() will return array and latest added record will be shown here. oldest(), inRandomOrder()
-        //first() without get() will return array and first record will be shown. 
-        ->get()->sortBy('student_id');
+        //with pagination 
+        $students = DB::table('students')->simplePaginate(2);
+        //without pagination
+        // $students = DB::table("students")
+        // // ->orderBy('name')
+        // // ->orderBy('age', 'desc')
+        // // ->orderBy('age', 'asc')
+        // //latest() without get() will return array and latest added record will be shown here. oldest(), inRandomOrder()
+        // //first() without get() will return array and first record will be shown. 
+        // ->get()->sortBy('student_id');
 
         // ->count() will count all the data base records. 
         //max('age'), min('age'), avg('age'), sum('age') for integer and float values
@@ -64,22 +68,27 @@ class UserController extends Controller
     }
 
     public function deleteAll(){
-        $students = DB::table("students")->delete();
-
-
-        if($students){
-            $students = DB::table("students")->truncate();
-            return redirect()->route("home");
+        $msg = "Nothing to Delete";
+        if(!DB::table("students")->get()->isEmpty()){
+               $students = DB::table("students")->truncate();
+                return redirect()->route("home")->with(["message"=>"Students data reset Successfully"]);
         }else{
-            return "<h2> Delete Error</h2><a href='".route('home')."'>Go Back to Home</a>";
+            return redirect()->route("home")->with(["message"=>$msg]);
         }
+    
+
+        
+      
+    
+
+        
 
     }
     public function deleteUser(string $id){
             $deleuser = DB::table("students")->where("student_id",$id)->delete();
             // $deleuser = DB::table("students")->where("student_id",$id)->truncate();
             if($deleuser){
-                return redirect()->route("home");
+                return redirect()->route("home")->with(["message"=>"Data Deleted Successfully"]);
             }
             else{
                 return "<h2> Delete Error</h2><a href='".route('home')."'>Go Back to Home</a>";

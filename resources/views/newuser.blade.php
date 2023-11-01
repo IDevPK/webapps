@@ -1,7 +1,6 @@
 @extends('layouts.masterlayout')
 
 @section('content')
-
 <div class="container">
   <div class="row">
     <div class="col-md-16">
@@ -37,5 +36,4 @@
     </div>
   </div>
 </div>
-
 @endsection
