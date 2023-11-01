@@ -1,3 +1,17 @@
+## Web App using Laravel framework
+## this website is just to practice my knowledge. 
+<p>This project is a part of my essential Laravel learning process</p>
+<h3>What I have learned is as under : </h3>
+<p>MVC</p>
+<p>Routing</p>
+<p>Blade Template and Layout System</p>
+<p>How to creat Controllers</p>
+<p>Migration</p>
+<p>Seeding</p>
+<p>Creat, Read, Update, Delete DataBase using Controller, Routes and DB class of Laravel </p>
+
+<h5>Iftikhar Ahmad</h5>
+<p>You Can Find more details about Laravel Below. </p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
