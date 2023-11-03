@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('liberaries', function (Blueprint $table) {
             $table->integer('lib_id')->autoIncrement();
-            // $table->foreign('stu_id')->references('student_id')->on('students')
-            $table->foreignId('stu_id')->constrained('students')
+            $table->integer('stu_id',)->unsigned();
+            $table->foreign('stu_id')->references('student_id')->on('students')
+            // $table->foreignId('stu_id')->constrained('students')
             ->onUpdate('cascade')->onDelete('set Null');
             $table->string('book');
             $table->boolean('status');

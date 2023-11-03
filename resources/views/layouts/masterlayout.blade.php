@@ -18,7 +18,7 @@
 				<img src="{{url('images/logo.png')}}">
 			</div>
 			<li><a href="{{route('home')}}">Home</a></li>
-			<li><a href="">Blog</a></li>
+			<li><a href="{{route('liberary')}}">Liberary</a></li>
 			<li><a href="">About Us</a></li>
 			<li><a href="">Users</a></li>
 		</ul>

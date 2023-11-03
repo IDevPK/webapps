@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LiberaryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ Route::post("/add",'createUser')->name("createuser");
 Route::get("/deleteall",'deleteAll')->name("deleteall");
 Route::get("/newuser","newuser")->name("addUser");
 
+});
+
+Route::controller(LiberaryController::class)->group(function(){
+  Route::get('/liberary','liberaryView')->name('liberary');
 });
 
 

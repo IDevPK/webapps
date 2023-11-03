@@ -13,7 +13,10 @@ class UserController extends Controller
     public function home(){
 
         //with pagination 
-        $students = DB::table('students')->simplePaginate(2);
+        $students = DB::table('students')
+        ->orderBy('student_id')
+        ->paginate(5);
+        // ->simplePaginate(5);
         //without pagination
         // $students = DB::table("students")
         // // ->orderBy('name')
@@ -60,10 +63,10 @@ class UserController extends Controller
             ]
         );
         if($updateuser){
-        return redirect()->route('home');
+        return redirect()->route('home')->with(["success"=>"User Updated"]);
         }
         else{
-            "<h2>Update error Occured</h2>";
+            return redirect()->route('home')->with(["message"=>"Could Not Update user"]);
         }
     }
 
@@ -75,13 +78,6 @@ class UserController extends Controller
         }else{
             return redirect()->route("home")->with(["message"=>$msg]);
         }
-    
-
-        
-      
-    
-
-        
 
     }
     public function deleteUser(string $id){
@@ -111,9 +107,9 @@ class UserController extends Controller
             // 'age'=>fake()->numberBetween(10,60),
         ]);
         if($user){
-            return redirect()->route('home');
+            return redirect()->route('home')->with(["success"=>"User Added in the Database"]);
         }else{
-            return "<h2>Error Occured</h2>";
+            return redirect()->route('home')->with(["message"=>"Could not create User Error Occured"]);
         }
     }
 

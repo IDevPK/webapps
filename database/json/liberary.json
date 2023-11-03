@@ -18,6 +18,21 @@
     "stu_id":4,
     "book":"Statistics",
     "status":false
+  },
+  {
+    "stu_id":7,
+    "book":"Medical",
+    "status":true
+  },
+  {
+    "stu_id":19,
+    "book":"PakStudy",
+    "status":true
+  },
+  {
+    "stu_id":8,
+    "book":"Mechanics",
+    "status":true
   }
 
 ]
